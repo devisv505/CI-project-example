@@ -2,3 +2,11 @@ language: java
 
 jdk:
   - openjdk11
+
+services:
+  - docker
+
+script:
+  - docker login -u $DOCKER_LOGIN -p $DOCKER_PASSWORD
+  - docker build . -t devisv/ci-project-example:latest --no-cache
+  - docker push devisv/ci-project-example:latest
