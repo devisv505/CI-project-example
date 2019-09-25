@@ -7,12 +7,6 @@ services:
   - docker
 
 script:
-  - docker login -u $DOCKER_LOGIN -p $DOCKER_PASSWORD
-  - docker build . -t devisv/ci-project-example:latest --no-cache
-  - docker push devisv/ci-project-example:latest
-
-deploy:
-  provider: heroku
-  api_key:
-    secure: $HEROKU_API_KEY
-  app: ci-project-example-dev
+  - docker login docker.pkg.github.com -u $DOCKER_LOGIN -p $DOCKER_PASSWORD
+  - docker build . -t docker.pkg.github.com/devisv505/CI-project-example/ci-project-example:latest --no-cache
+  - docker push docker.pkg.github.com/devisv505/CI-project-example/ci-project-example:latest
