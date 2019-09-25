@@ -9,4 +9,4 @@ services:
 script:
   - docker login docker.pkg.github.com -u $DOCKER_LOGIN -p $DOCKER_PASSWORD
   - docker build . -t docker.pkg.github.com/devisv505/ci-project-example/ci-project-example:latest --no-cache
-  - docker push docker.pkg.github.com/devisv505/CI-project-example/ci-project-example:latest
+  - docker push docker.pkg.github.com/devisv505/ci-project-example/ci-project-example:latest
