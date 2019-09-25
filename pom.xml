@@ -34,8 +34,8 @@
     <distributionManagement>
         <repository>
             <id>github</id>
-            <name>GitHub OWNER Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/devisv/CI-project-example</url>
+            <name>GitHub devisv505 Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/devisv505/CI-project-example</url>
         </repository>
     </distributionManagement>
 
